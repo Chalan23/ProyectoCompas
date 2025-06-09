@@ -15,7 +15,24 @@ def calcuPromedio():
     print(f"Su promedio final es {promedio}")
     
 
-# def 2 (Aqui debe ir un segundo def)
+def calcuBasica():
+    num1 = int(input("numero 1 ")) 
+    num2 = int(input("numero 2 ")) 
+
+    operacion = input("introduce una operacion (+ - * /)")
+
+    match operacion:
+        case "+":
+            res = num1+num2
+        case "-":
+            res = num1-num2
+        case "*":
+            res = num1*num2
+        case "/":
+            res = num1/num2
+
+    print(f"resultado de {num1} {operacion} {num2} = {res}")
+   
 
 # def 3 (Aqui debe ir un tercer def)
 
@@ -37,7 +54,10 @@ def opcion():
                       """)
                 calcuPromedio()
                 
-            # case 2: (Completar)
+            case 2: 
+                print("calculadora basica ")
+                calcuBasica()
+                
             
             # case 3: (Completar)
             
