@@ -10,7 +10,7 @@ def calcuPromedio():
     nota1 = float(input("Ingrese la primera nota: "))
     nota2 = float(input("Ingrese la segunda nota: "))
     nota3 = float(input("Ingrese la tercera nota: "))
-    promedio = (nota1+nota2+nota3/3)
+    promedio = ((nota1+nota2+nota3)/3)
     
     print(f"Su promedio final es {promedio}")
     
@@ -34,7 +34,24 @@ def calcuBasica():
     print(f"resultado de {num1} {operacion} {num2} = {res}")
    
 
-# def 3 (Aqui debe ir un tercer def)
+# Parte realizada por Esteban
+def VerEdad():
+    while True:
+        try:
+            print("Ingrese su edad")
+            edad=int(input())
+            break
+        except Exception:
+            print("Ingrese un número entero") 
+    if edad<=12:
+        print("Usted es un(a) niño/a")
+    elif edad>=13 and edad<=17:
+        print("Usted es un(a) adolescente")    
+    elif edad>=18 and edad<=64:
+        print("Usted es un adulto") 
+    else:
+        print("Usted es adulto mayor")           
+           
 
 # Parte realizada por Ernesto
 def opcion():
@@ -42,8 +59,8 @@ def opcion():
         op = int(input("""
                        Bienvenido al programa de verificaciones
                        1.-Calcular promedio.
-                       2.-
-                       3.-
+                       2.-Caculadora básica
+                       3.-Verificar edad
                        4.-Salir.
                        """))
         match op:
@@ -58,8 +75,9 @@ def opcion():
                 print("calculadora basica ")
                 calcuBasica()
                 
-            
-            # case 3: (Completar)
+            case 3: 
+                print("Verificador de edad")
+                VerEdad()
             
             case _:
                 print("Saliendo...")
